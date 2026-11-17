@@ -337,3 +337,81 @@ body {
         box-sizing: border-box;
     }
 }
+/* Featured release on homepage */
+.featured-release {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.featured-release img {
+    width: 380px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.featured-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.featured-label {
+    color: #aab8cc;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+
+.featured-info h2 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin: 15px 0;
+}
+
+.featured-info p {
+    color: #aab8cc;
+}
+
+.featured-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.featured-button:hover {
+    background-color: #aab8cc;
+    color: #11151c;
+}
+
+/* Featured release on phones */
+@media (max-width: 700px) {
+    .featured-release {
+        flex-direction: column;
+        gap: 25px;
+        margin: 40px auto;
+    }
+
+    .featured-release img {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .featured-info {
+        text-align: center;
+    }
+
+    .featured-info h2 {
+        font-size: 36px;
+    }
+}
