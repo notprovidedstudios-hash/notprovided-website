@@ -447,42 +447,103 @@ footer {
 /* LIVE SHOWS SECTION */
 
 .shows-content {
-    max-width: 650px;
+    max-width: 750px;
     margin: 40px auto 0;
-    text-align: center;
 }
 
-.shows-message {
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: #e8e8e8;
+.shows-content > h3 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #aab8cc;
+    margin-bottom: 35px;
+}
+
+.show-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
     margin-bottom: 20px;
-}
-
-.shows-content p {
-    line-height: 1.9;
-}
-
-.shows-button {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 30px;
-    border: 1px solid #aab8cc;
-    color: #e8e8e8;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
+    background-color: #11151c;
+    border: 1px solid #354258;
+    border-radius: 6px;
+    text-align: left;
     transition: 0.3s;
 }
 
-.shows-button:hover {
-    background-color: #aab8cc;
-    color: #11151c;
+.show-card:hover {
+    border-color: #91a9cc;
+    transform: translateY(-3px);
 }
-/* CONTACT SECTION */
 
-#contact {
+.show-date {
+    background-color: #28354b;
+    padding: 20px;
+    min-width: 125px;
     text-align: center;
+    border-radius: 4px;
+}
+
+.show-date h3 {
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #e8e8e8;
+    margin: 0;
+}
+
+.show-date p {
+    font-size: 13px;
+    color: #aab8cc;
+    margin: 5px 0 0;
+}
+
+.show-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.show-info h3 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #e8e8e8;
+    margin: 0 0 10px;
+}
+
+.show-info p {
+    font-size: 14px;
+    color: #b7beca;
+    margin: 5px 0;
+    line-height: 1.7;
+}
+
+.show-info p:nth-of-type(4) {
+    color: #91a9cc;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 12px;
+}
+
+/* LIVE SHOWS ON PHONES */
+
+@media (max-width: 700px) {
+
+    .show-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+
+    .show-date {
+        width: 150px;
+    }
+
+    .show-info {
+        text-align: center;
+    }
 }
 
 /* Social media buttons */
