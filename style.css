@@ -444,3 +444,38 @@ footer {
     }
 }
 }
+/* LIVE SHOWS SECTION */
+
+.shows-content {
+    max-width: 650px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.shows-message {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #e8e8e8;
+    margin-bottom: 20px;
+}
+
+.shows-content p {
+    line-height: 1.9;
+}
+
+.shows-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.shows-button:hover {
+    background-color: #aab8cc;
+    color: #11151c;
+}
