@@ -838,3 +838,48 @@ footer {
     background-color: #0d0a0d;
     color: #a98c99;
 }
+/* ANIMATED BURGUNDY GLOW FOR MAGNET */
+
+.featured-release img {
+    position: relative;
+    border-radius: 6px;
+
+    box-shadow:
+        0 0 25px rgba(120, 59, 82, 0.4),
+        0 0 60px rgba(120, 59, 82, 0.2);
+
+    animation: magnetGlow 4s ease-in-out infinite;
+}
+
+/* Slowly pulsing glow */
+
+@keyframes magnetGlow {
+
+    0% {
+        box-shadow:
+            0 0 20px rgba(120, 59, 82, 0.3),
+            0 0 45px rgba(120, 59, 82, 0.15);
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px rgba(166, 107, 130, 0.65),
+            0 0 90px rgba(120, 59, 82, 0.35);
+    }
+
+    100% {
+        box-shadow:
+            0 0 20px rgba(120, 59, 82, 0.3),
+            0 0 45px rgba(120, 59, 82, 0.15);
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .featured-release img {
+        animation: none;
+    }
+
+}
