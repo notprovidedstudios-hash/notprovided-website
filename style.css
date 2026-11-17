@@ -270,3 +270,14 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* Featured artist information */
+.release h3 + p {
+    font-size: 13px;
+    color: #aab8cc;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.release p + p {
+    margin-top: 0;
+}
