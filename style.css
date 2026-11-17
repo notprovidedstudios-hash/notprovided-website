@@ -629,3 +629,212 @@ footer {
         margin-top: 60px;
     }
 }
+/* NOTPROVIDED BURGUNDY WEBSITE THEME */
+
+/* Main website */
+
+body {
+    background-color: #130f13;
+    color: #f2e9ed;
+}
+
+/* Header and navigation */
+
+header {
+    background-color: #21151d;
+    border-bottom: 1px solid #512a3d;
+}
+
+nav a {
+    color: #e1bdcb;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* General text */
+
+section p {
+    color: #c9b4be;
+}
+
+section h2 {
+    color: #f2e9ed;
+}
+
+/* Homepage */
+
+#home {
+    background: linear-gradient(
+        135deg,
+        #130f13,
+        #512a3d,
+        #21151d
+    );
+}
+
+#home > p,
+#home .featured-label,
+#home .featured-info p {
+    color: #d6a3b7;
+}
+
+#home > h2 {
+    text-shadow: 0 0 30px rgba(166, 107, 130, 0.3);
+}
+
+/* Featured release button */
+
+.featured-button {
+    border-color: #a66b82;
+    color: #f2e9ed;
+}
+
+.featured-button:hover {
+    background-color: #a66b82;
+    color: #130f13;
+}
+
+/* Section backgrounds */
+
+#music {
+    background-color: #21151d;
+}
+
+#about {
+    background-color: #130f13;
+}
+
+#shows {
+    background: linear-gradient(
+        135deg,
+        #21151d,
+        #3d2230,
+        #21151d
+    );
+}
+
+#contact {
+    background-color: #130f13;
+}
+
+/* Discography */
+
+.release h3 {
+    color: #f2e9ed;
+}
+
+.release p {
+    color: #c99bac;
+}
+
+/* Streaming */
+
+.streaming-section p {
+    color: #c9b4be;
+}
+
+.streaming-links a {
+    border-color: #a66b82;
+    color: #f2e9ed;
+}
+
+.streaming-links a:hover {
+    background-color: #a66b82;
+    color: #130f13;
+}
+
+/* About */
+
+#about .about-content p {
+    color: #c9b4be;
+}
+
+/* Live shows */
+
+#shows h2 {
+    color: #f2e9ed;
+    text-shadow: 0 0 25px rgba(166, 107, 130, 0.5);
+}
+
+.shows-content > h3 {
+    color: #d6a3b7;
+}
+
+.show-card {
+    background: linear-gradient(
+        135deg,
+        #291923,
+        #171116
+    );
+    border-color: #783b52;
+    box-shadow: 0 0 20px rgba(120, 59, 82, 0.2);
+}
+
+.show-card::before {
+    background: #a66b82;
+    box-shadow: 0 0 15px #a66b82;
+}
+
+.show-card:hover {
+    border-color: #d6a3b7;
+    box-shadow: 0 0 35px rgba(166, 107, 130, 0.35);
+}
+
+/* Show date boxes */
+
+.show-date {
+    background: linear-gradient(
+        135deg,
+        #783b52,
+        #4a2639
+    );
+    border: 1px solid #a66b82;
+    box-shadow: 0 0 20px rgba(120, 59, 82, 0.3);
+}
+
+.show-date p {
+    color: #e1bdcb;
+}
+
+.show-info h3 {
+    color: #ffffff;
+}
+
+.show-info p {
+    color: #c9b4be;
+}
+
+.show-info p:nth-of-type(4) {
+    color: #e8b7c9;
+}
+
+/* Contact buttons */
+
+.social-links a,
+.email-button {
+    border-color: #a66b82;
+    color: #f2e9ed;
+}
+
+.social-links a:hover,
+.email-button:hover {
+    background-color: #a66b82;
+    color: #130f13;
+}
+
+.contact-email h3 {
+    color: #f2e9ed;
+}
+
+.contact-email p {
+    color: #c9b4be;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0d0a0d;
+    color: #a98c99;
+}
