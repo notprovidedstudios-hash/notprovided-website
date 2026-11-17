@@ -281,3 +281,59 @@ body {
 .release p + p {
     margin-top: 0;
 }
+/* Streaming section */
+.streaming-section {
+    margin: 80px auto 0;
+    text-align: center;
+    max-width: 700px;
+}
+
+.streaming-section h3 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.streaming-section p {
+    font-size: 14px;
+    color: #aab8cc;
+}
+
+/* Streaming buttons */
+.streaming-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.streaming-links a {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.streaming-links a:hover {
+    background-color: #aab8cc;
+    color: #11151c;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .streaming-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .streaming-links a {
+        width: 220px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
