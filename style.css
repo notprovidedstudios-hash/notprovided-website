@@ -479,3 +479,92 @@ footer {
     background-color: #aab8cc;
     color: #11151c;
 }
+/* CONTACT SECTION */
+
+#contact {
+    text-align: center;
+}
+
+/* Social media buttons */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #aab8cc;
+    color: #11151c;
+}
+
+/* Business email area */
+
+.contact-email {
+    margin: 80px auto 0;
+    max-width: 700px;
+}
+
+.contact-email h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.contact-email p {
+    font-size: 15px;
+    color: #b7beca;
+    margin-bottom: 30px;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 14px 25px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.email-button:hover {
+    background-color: #aab8cc;
+    color: #11151c;
+}
+
+/* Contact section on phones */
+
+@media (max-width: 700px) {
+
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        width: 220px;
+        max-width: 100%;
+    }
+
+    .contact-email {
+        margin-top: 60px;
+    }
+}
