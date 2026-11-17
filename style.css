@@ -1,4 +1,8 @@
 /* General website style */
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,70 +23,31 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 header h1 {
     font-size: 24px;
     letter-spacing: 5px;
     font-weight: 400;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 nav a {
     color: #d1d6df;
     text-decoration: none;
-    margin-left: 25px;
     font-size: 14px;
     letter-spacing: 2px;
 }
 
 nav a:hover {
     color: #91a9cc;
-}
-
-/* Homepage */
-#home {
-    min-height: 75vh;
-    background: linear-gradient(
-        135deg,
-        #10141b,
-        #28354b,
-        #131720
-    );
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px 20px;
-}
-
-#home h2 {
-    font-size: clamp(40px, 8vw, 90px);
-    font-weight: 300;
-    letter-spacing: 10px;
-    margin-bottom: 0;
-    animation: fadeIn 2s ease-in;
-}
-
-#home p {
-    color: #b0bed0;
-    letter-spacing: 4px;
-    font-size: 14px;
-}
-
-#home a {
-    margin-top: 30px;
-    padding: 12px 30px;
-    border: 1px solid #b0bed0;
-    color: #e8e8e8;
-    text-decoration: none;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-#home a:hover {
-    background-color: #b0bed0;
-    color: #11151c;
 }
 
 /* Main sections */
@@ -105,7 +70,98 @@ section p {
     color: #b7beca;
 }
 
-/* Alternating section colors */
+/* Homepage */
+#home {
+    min-height: 75vh;
+    background: linear-gradient(
+        135deg,
+        #10141b,
+        #28354b,
+        #131720
+    );
+    padding: 80px 8%;
+    text-align: center;
+}
+
+#home > h2 {
+    font-size: clamp(36px, 7vw, 75px);
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin: 0;
+    animation: fadeIn 2s ease-in;
+}
+
+#home > p {
+    color: #b0bed0;
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
+/* Featured Magnet release */
+.featured-release {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 70px auto 0;
+}
+
+.featured-release img {
+    display: block;
+    width: 380px;
+    max-width: 45%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.featured-info {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+}
+
+#home .featured-label {
+    color: #aab8cc;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+#home .featured-info h2 {
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin: 15px 0;
+}
+
+#home .featured-info p {
+    color: #aab8cc;
+    margin-left: 0;
+}
+
+.featured-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.featured-button:hover {
+    background-color: #aab8cc;
+    color: #11151c;
+}
+
+/* Section backgrounds */
 #music {
     background-color: #171c26;
 }
@@ -120,6 +176,91 @@ section p {
 
 #contact {
     background-color: #11151c;
+}
+
+/* Discography */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.release {
+    min-width: 0;
+    text-align: center;
+}
+
+.release img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.release h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 15px 0 5px;
+}
+
+.release p {
+    font-size: 13px;
+    color: #9ba9bc;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Featured artist credits */
+.release p + p {
+    margin-top: 0;
+}
+
+/* Streaming section */
+.streaming-section {
+    margin: 80px auto 0;
+    text-align: center;
+    max-width: 700px;
+}
+
+.streaming-section h3 {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.streaming-section p {
+    font-size: 14px;
+    color: #aab8cc;
+}
+
+.streaming-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.streaming-links a {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid #aab8cc;
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.streaming-links a:hover {
+    background-color: #aab8cc;
+    color: #11151c;
 }
 
 /* Footer */
@@ -145,261 +286,45 @@ footer {
     }
 }
 
-/* Mobile devices */
-@media (max-width: 768px) {
+/* Tablet screens */
+@media (max-width: 900px) {
+    .music-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-release {
+        gap: 30px;
+    }
+}
+
+/* Phone screens */
+@media (max-width: 700px) {
     header {
         flex-direction: column;
         text-align: center;
     }
 
     nav {
-        margin-top: 15px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 8px;
-    }
-
-    #home h2 {
-        font-size: 38px;
-        letter-spacing: 4px;
+        justify-content: center;
     }
 
     section {
         padding: 70px 8%;
     }
-}
-/* Discography */
-.music-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 50px auto 0;
-}
 
-.release {
-    min-width: 0;
-    text-align: center;
-}
-
-.release img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.release h3 {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-}
-
-.release p {
-    font-size: 13px;
-    color: #9ba9bc;
-}
-
-/* Tablet */
-@media (max-width: 900px) {
-    .music-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* Phone */
-@media (max-width: 600px) {
-    .music-grid {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-    }
-}
-/* Keep everything inside the screen */
-* {
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-/* Fix discography layout */
-#music {
-    width: 100%;
-}
-
-.music-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 25px;
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-.release {
-    min-width: 0;
-    width: 100%;
-}
-
-.release img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-/* Smaller screens */
-@media (max-width: 768px) {
-    .music-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* Phones */
-@media (max-width: 500px) {
-    .music-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Featured artist information */
-.release h3 + p {
-    font-size: 13px;
-    color: #aab8cc;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.release p + p {
-    margin-top: 0;
-}
-/* Streaming section */
-.streaming-section {
-    margin: 80px auto 0;
-    text-align: center;
-    max-width: 700px;
-}
-
-.streaming-section h3 {
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 4px;
-}
-
-.streaming-section p {
-    font-size: 14px;
-    color: #aab8cc;
-}
-
-/* Streaming buttons */
-.streaming-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.streaming-links a {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 1px solid #aab8cc;
-    color: #e8e8e8;
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 2px;
-    transition: 0.3s;
-}
-
-.streaming-links a:hover {
-    background-color: #aab8cc;
-    color: #11151c;
-}
-
-/* Mobile layout */
-@media (max-width: 600px) {
-    .streaming-links {
-        flex-direction: column;
-        align-items: center;
+    #home > h2 {
+        font-size: 38px;
+        letter-spacing: 4px;
     }
 
-    .streaming-links a {
-        width: 220px;
-        max-width: 100%;
-        box-sizing: border-box;
+    #home > p {
+        letter-spacing: 2px;
     }
-}
-/* Featured release on homepage */
-.featured-release {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1000px;
-    margin: 70px auto;
-    padding: 20px;
-}
 
-.featured-release img {
-    width: 380px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.featured-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.featured-label {
-    color: #aab8cc;
-    font-size: 12px;
-    letter-spacing: 4px;
-}
-
-.featured-info h2 {
-    font-size: 48px;
-    font-weight: 400;
-    letter-spacing: 5px;
-    margin: 15px 0;
-}
-
-.featured-info p {
-    color: #aab8cc;
-}
-
-.featured-button {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 28px;
-    border: 1px solid #aab8cc;
-    color: #e8e8e8;
-    text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.featured-button:hover {
-    background-color: #aab8cc;
-    color: #11151c;
-}
-
-/* Featured release on phones */
-@media (max-width: 700px) {
     .featured-release {
         flex-direction: column;
         gap: 25px;
-        margin: 40px auto;
+        margin-top: 40px;
     }
 
     .featured-release img {
@@ -411,7 +336,30 @@ body {
         text-align: center;
     }
 
-    .featured-info h2 {
+    #home .featured-info h2 {
         font-size: 36px;
+    }
+
+    #home .featured-info p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .streaming-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .streaming-links a {
+        width: 220px;
+        max-width: 100%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 500px) {
+    .music-grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
     }
 }
