@@ -170,82 +170,7 @@ footer {
         padding: 70px 8%;
     }
 }
-/* NotProvided discography */
-
-.music-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1100px;
-    margin: 50px auto 0;
-}
-
-.release {
-    text-align: center;
-}
-
-.album-placeholder {
-    aspect-ratio: 1 / 1;
-    background: linear-gradient(135deg, #344158, #11151c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #e8e8e8;
-    letter-spacing: 3px;
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-.release h3 {
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    margin-bottom: 0;
-}
-
-.release p {
-    font-size: 13px;
-    color: #9ba9bc;
-}
-
-@media (max-width: 768px) {
-    .music-grid {
-        grid-template-columns: 1fr;
-        max-width: 350px;
-    }
-}
-/* Album artwork styling */
-.release img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-    border-radius: 3px;
-    transition: transform 0.3s ease;
-}
-
-/* Album artwork hover effect */
-.release img:hover {
-    transform: scale(1.03);
-}
-
-/* Music grid layout */
-.music-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1100px;
-    margin: 50px auto 0;
-}
-
-/* Mobile layout */
-@media (max-width: 768px) {
-    .music-grid {
-        grid-template-columns: 1fr;
-        max-width: 350px;
-    }
-}
-/* Fix album cover sizes */
+/* Discography */
 .music-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -260,14 +185,24 @@ footer {
 }
 
 .release img {
-    width: 100%;
-    max-width: 260px;
-    aspect-ratio: 1 / 1;
-    height: auto;
-    object-fit: cover;
     display: block;
-    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 4px;
+}
+
+.release h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.release p {
+    font-size: 13px;
+    color: #9ba9bc;
 }
 
 /* Tablet */
@@ -277,7 +212,7 @@ footer {
     }
 }
 
-/* Phones */
+/* Phone */
 @media (max-width: 600px) {
     .music-grid {
         grid-template-columns: 1fr;
