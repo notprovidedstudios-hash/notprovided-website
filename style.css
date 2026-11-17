@@ -441,3 +441,25 @@ footer {
         text-align: center;
     }
 }
+/* Make About photo smaller */
+.about-photo {
+    flex: 0 1 300px;
+    min-width: 0;
+}
+
+.about-photo img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Keep photo responsive on phones */
+@media (max-width: 700px) {
+    .about-photo {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+}
