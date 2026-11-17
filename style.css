@@ -883,3 +883,28 @@ footer {
     }
 
 }
+/* STREAMING BUTTONS */
+
+.streaming-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.streaming-buttons a {
+    background-color: #702d46;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.streaming-buttons a:hover {
+    background-color: #a34665;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 20px rgba(163, 70, 101, 0.4);
+}
