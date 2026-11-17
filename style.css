@@ -1,4 +1,5 @@
-/* General website style */
+/* GENERAL WEBSITE STYLE */
+
 * {
     box-sizing: border-box;
 }
@@ -15,7 +16,8 @@ body {
     line-height: 1.7;
 }
 
-/* Top navigation */
+/* HEADER AND NAVIGATION */
+
 header {
     background-color: #171c26;
     padding: 20px 8%;
@@ -50,7 +52,8 @@ nav a:hover {
     color: #91a9cc;
 }
 
-/* Main sections */
+/* GENERAL SECTIONS */
+
 section {
     padding: 100px 12%;
     text-align: center;
@@ -70,7 +73,8 @@ section p {
     color: #b7beca;
 }
 
-/* Homepage */
+/* HOMEPAGE */
+
 #home {
     min-height: 75vh;
     background: linear-gradient(
@@ -97,7 +101,8 @@ section p {
     font-size: 14px;
 }
 
-/* Featured Magnet release */
+/* FEATURED MAGNET RELEASE */
+
 .featured-release {
     display: flex;
     align-items: center;
@@ -161,7 +166,8 @@ section p {
     color: #11151c;
 }
 
-/* Section backgrounds */
+/* SECTION BACKGROUNDS */
+
 #music {
     background-color: #171c26;
 }
@@ -178,7 +184,8 @@ section p {
     background-color: #11151c;
 }
 
-/* Discography */
+/* DISCOGRAPHY */
+
 .music-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -216,12 +223,8 @@ section p {
     margin-bottom: 5px;
 }
 
-/* Featured artist credits */
-.release p + p {
-    margin-top: 0;
-}
+/* STREAMING SECTION */
 
-/* Streaming section */
 .streaming-section {
     margin: 80px auto 0;
     text-align: center;
@@ -263,7 +266,45 @@ section p {
     color: #11151c;
 }
 
-/* Footer */
+/* ABOUT NOTPROVIDED */
+
+#about .about-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 950px;
+    margin: 50px auto 0;
+}
+
+#about .about-photo {
+    width: 280px;
+    max-width: 100%;
+}
+
+#about .about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+#about .about-content {
+    min-width: 0;
+    text-align: left;
+}
+
+#about .about-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #b7beca;
+    margin: 0 0 20px;
+    max-width: none;
+}
+
+/* FOOTER */
+
 footer {
     text-align: center;
     padding: 25px;
@@ -273,7 +314,8 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Fade-in animation */
+/* FADE-IN ANIMATION */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -286,8 +328,10 @@ footer {
     }
 }
 
-/* Tablet screens */
+/* TABLET SCREENS */
+
 @media (max-width: 900px) {
+
     .music-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -295,10 +339,21 @@ footer {
     .featured-release {
         gap: 30px;
     }
+
+    #about .about-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 25px;
+    }
+
+    #about .about-photo {
+        width: 220px;
+    }
 }
 
-/* Phone screens */
+/* PHONE SCREENS */
+
 @media (max-width: 700px) {
+
     header {
         flex-direction: column;
         text-align: center;
@@ -354,112 +409,38 @@ footer {
         width: 220px;
         max-width: 100%;
     }
+
+    /* About section on phones */
+
+    #about .about-layout {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 30px;
+    }
+
+    #about .about-photo {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    #about .about-content {
+        width: 100%;
+        text-align: center;
+    }
 }
 
-/* Small phones */
+/* SMALL PHONES */
+
 @media (max-width: 500px) {
+
     .music-grid {
         grid-template-columns: 1fr;
         max-width: 300px;
     }
-}
-/* About NotProvided */
-.about-content {
-    max-width: 750px;
-    margin: 40px auto 0;
-    text-align: left;
-}
 
-.about-content p {
-    font-size: 16px;
-    line-height: 2;
-    color: #b7beca;
-    margin-bottom: 25px;
-}
-
-@media (max-width: 700px) {
-    .about-content {
-        text-align: center;
-    }
-
-    .about-content p {
-        font-size: 15px;
-        line-height: 1.8;
+    #home > h2 {
+        font-size: 30px;
+        letter-spacing: 3px;
     }
 }
-/* About section layout */
-.about-layout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    max-width: 1100px;
-    margin: 50px auto 0;
-}
-
-/* About photo */
-.about-photo {
-    flex: 1;
-    min-width: 0;
-}
-
-.about-photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-}
-
-/* About biography */
-.about-content {
-    flex: 1;
-    min-width: 0;
-    text-align: left;
-}
-
-.about-content p {
-    font-size: 15px;
-    line-height: 1.9;
-    color: #b7beca;
-    margin-bottom: 20px;
-}
-
-/* About section on phones */
-@media (max-width: 700px) {
-    .about-layout {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .about-photo {
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .about-content {
-        width: 100%;
-        text-align: center;
-    }
-}
-/* Make About photo smaller */
-.about-photo {
-    flex: 0 1 300px;
-    min-width: 0;
-}
-
-.about-photo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Keep photo responsive on phones */
-@media (max-width: 700px) {
-    .about-photo {
-        flex: none;
-        width: 100%;
-        max-width: 300px;
-    }
 }
