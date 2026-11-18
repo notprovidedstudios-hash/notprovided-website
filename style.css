@@ -952,3 +952,100 @@ footer {
         gap: 20px;
     }
 }
+/* CLICKABLE ALBUM COVERS */
+
+.release-dropdown {
+    width: 100%;
+}
+
+.release-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.release-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Album cover hover effect */
+
+.release-dropdown summary img {
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.release-dropdown summary:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(166, 107, 130, 0.5);
+}
+
+/* Glow when album is selected */
+
+.release-dropdown[open] summary img {
+    box-shadow: 0 0 30px rgba(166, 107, 130, 0.6);
+}
+
+/* Pop-up streaming buttons */
+
+.release-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 5px;
+    animation: releaseFade 0.3s ease;
+}
+
+.release-links a {
+    display: block;
+    background-color: #702d46;
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Button hover effect */
+
+.release-links a:hover {
+    background-color: #a34665;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(163, 70, 101, 0.4);
+}
+
+/* Pop-up animation */
+
+@keyframes releaseFade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyboard accessibility */
+
+.release-dropdown summary:focus-visible {
+    outline: 2px solid #e1bdcb;
+    outline-offset: 5px;
+}
+
+/* Reduce animations if preferred */
+
+@media (prefers-reduced-motion: reduce) {
+    .release-links {
+        animation: none;
+    }
+
+    .release-dropdown summary img,
+    .release-links a {
+        transition: none;
+    }
+}
