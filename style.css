@@ -1091,3 +1091,22 @@ footer {
     border: 3px solid #722f45;
     box-shadow: 0 0 20px rgba(114, 47, 69, 0.4);
 }
+
+/* VENMO SUPPORT BUTTON */
+
+.venmo-button {
+    display: inline-block;
+    background-color: #722f45;
+    color: white;
+    padding: 12px 28px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.venmo-button:hover {
+    background-color: #963e5b;
+    transform: scale(1.05);
+}
